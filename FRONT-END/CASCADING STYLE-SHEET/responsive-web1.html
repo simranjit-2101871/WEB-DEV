@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traiditional food.com</title>
+    
+    <style>
+        body{
+            margin: 0px;
+            padding:0px;
+        }
+        /*navbar*/
+
+        #navbar{
+            position: relative;
+            
+            padding:0px;
+        }
+        #navbar ul{
+            display:flex;
+            align-items:center;
+        }
+       
+        
+        #logo{
+           margin:0px;
+           padding:0px;
+        }
+       #logo img{
+        margin:10px 10px;
+        height:50px;
+        width:50px;
+        border-radius:50%;
+       }
+      #navbar {
+        display:flex;
+        align-items:center;
+        }
+        #navbar ul{
+            display:flex;
+            align-items:center;
+        }
+        #navbar::before{
+            margin: 0px;
+            content:"";
+            background-color: black;
+            position:absolute;
+            height:100%;
+            width:100%;
+            z-index:-1;
+            opacity:0.4;
+            
+        }
+        #navbar ul li{
+            list-style: none;
+            font-size:1.3rem;
+        }
+        #navbar ul li a{
+            color:white;
+            display:block;
+            padding:3px 22px;
+            border-radius:20px;
+            text-decoration:none;
+            
+        }
+        #navbar ul li a:hover{
+            color:black;
+            background-color:white;
+            
+            
+        }
+        /*HOME DESIGNING*/
+       
+        
+        #home::before{
+            margin: 0px;
+            content:"";
+            background:url('../WEB-DEV/dev-image/bg.jpg')no-repeat center center/cover;
+            
+            height:100%;
+            width:100%;
+            z-index:-1;
+            opacity:0.85;
+            
+        }
+        
+           
+        
+        #home h1{
+            color:white;
+            text-align:centre;
+        }
+        #home p{
+            color:white;
+            text-align:centre;
+            font-size: 1.2rem;
+            margin:10px;
+        }
+
+
+    
+        /*Utility class*/
+        .h-primary{
+            font-size:40px;
+            padding:12px;
+            margin:10px;
+        }
+        .btn{
+            padding:6px 20px;
+            border:2px solid white;
+            background-color:brown;
+            color:white;
+            margin:10px;
+            font-size:1.2rem;
+            border-radius:10px;
+            cursor:pointer;
+        }
+
+        .center{
+            text-align: center;
+        }
+        .h-secondary{
+            font-size:2.8 rem;
+            padding:12px;
+        }
+      
+
+
+        
+
+         /*SERVICE SECTION*/
+
+
+          #services{
+            margin:34px;
+            display:flex;
+            
+         }
+         .box{
+            flex: 1; /* This will make all boxes have equal size */
+            border: 2px solid brown;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            margin: 3px 6px;
+            border-radius: 27px;
+            background-color: rgb(220, 194, 194);
+               
+         }
+         #services.box img{
+            height:160px;
+            margin: auto;
+            
+             
+         }
+         .services-container{
+            border: 2px solid black;
+            top: 10px;
+            margin-top: 1px;
+            background-color: rgb(225, 215, 230);
+         }
+         #box2 img{
+           height: 180px;
+           width:290px;
+          
+         }
+         #box3 img{
+           height: 180px;
+           width:290px;
+         }
+         button{
+            padding:6px 20px;
+            border:2px solid white;
+            background-color:brown;
+            color:white;
+            margin:10px;
+            font-size:1.2rem;
+            border-radius:10px;
+            cursor:pointer;
+        }
+
+        /*CHEFS SECTION*/
+        #chef-section{
+            height: 400px;
+            border: 1px solid black;
+            background:url('../WEB-DEV/dev-image/zomato.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index:-1;
+            opacity: 0.9;
+        }
+        #chefs{
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding:20px;
+
+        }
+        .chef-box{
+            flex:1;
+            max-width: 300px;
+            margin:10px;
+            text-align:center;
+        }
+
+        .chef-box img{
+            width: 100%; /* Make the images take up the full width of the chef box */
+            height: 170px; /* Automatically adjust the height while maintaining aspect ratio */
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+        }
+        .h-primary-center{
+         color: aliceblue;
+         position:relative;
+         left:600px;
+         font-size:34px;
+
+        }
+
+
+
+
+        /*CONTACT INFORMATION*/
+
+
+        #contact {
+        height: 680px;
+        border: 1px solid black;
+        background: url('../WEB-DEV/dev-image/conatct.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative; /* Required for absolute positioning of overlay */
+       }
+
+       #contact::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+       opacity: 0.7; /* Adjust the opacity as needed */
+       pointer-events: none; /* Allows clicks to pass through the overlay */
+       z-index: 1; /* Place the overlay above the background image */
+       }
+       #contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 34px;
+    flex-direction: column;
+    max-width: 600px; /* Adjust this value as needed */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+#contact-box form {
+    width: 100%; /* Take up the full width of the container */
+}
+
+.form-group {
+    width: 100%; /* Set all form elements to the same width */
+    margin-bottom: 15px; /* Add spacing between form elements */
+}
+
+.form-group label {
+    display: block; /* Display labels on separate lines */
+    margin-bottom: 5px; /* Add spacing below labels */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Set input and textarea to take up full width */
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Add a simple border */
+    border-radius: 5px; /* Round the corners */
+}
+
+        
+ .contact-heading{
+         
+         position:relative;
+         left:600px;
+         font-size:34px;
+
+        }
+
+            
+        
+        
+       </style>
+    
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="C:\Users\simranjit\Documents\vs code\WEB-DEV\dev-image\logo.png"alt="error">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+     <section id="home">
+       
+        <h1 class="h-primary">Welcome to Traidional Food</h1>
+        <P>Tommay tommy yes papa eating sugar no papa telling alie no papa open your mouth ha ha ha 
+            yo yo honey  
+            <P>sugar no papa telling alie no papa open 
+            your mouth ha ha ha</P>
+        </P>
+        <button class="btn">Order Now</button>
+     </section>
+     
+
+     <section class="services-container">
+        <h1 class="primary center">Food Order</h1>
+            <div id="services">
+                <div class="box">
+                <img src="C:\Users\simranjit\Documents\vs code\WEB-DEV\dev-image\image1.jpeg"alt="">
+                <h2 class="h-secondary center">
+                   <button>YOUR ORDER</button>
+                </h2>
+                <P>Expereince various variety of tradional food from every part of india at one place</P>
+                </div>
+                    <div class="box" id="box2">
+                        <img src="C:\Users\simranjit\Documents\vs code\WEB-DEV\dev-image\zomato.jpg"alt="">
+                        <h2 class="h-secondary center">
+                            <button>DELIVERY</button>
+                        </h2>
+                        <P>Free online delivery is available on frisst three orders and order is delliverd under 30 minutes</P>
+                         
+                            </div>
+
+                            <div class="box" id="box3">
+                                <img src="C:\Users\simranjit\Documents\vs code\WEB-DEV\dev-image\iamge2.jpg"alt="">
+                                <h2 class="h-secondary center">
+                                   <button>Cart</button> 
+                                </h2>
+                                <P>Wan to order in bulk? So hers is the facility fro cart to store your items and order everything at once
+                                    </P>
+                                    </div>
+                                </div>
+
+    </section>
+
+
+    <section id="chef-section">
+        <h1 class="h-primary-center">Our CHEFS</h1><br>
+        <div id="chefs" class="chef-container">
+            <div class="chef-box">
+                <img src="C:\Users\simranjit\Documents\vs code\WEB-DEV\dev-image\chef1.jpeg" alt="error">
+            </div>
+            <div class="chef-box">
+                <img src="C:\Users\simranjit\Documents\vs code\WEB-DEV\dev-image\chef2.jpeg" alt="error">
+            </div>
+            <div class="chef-box">
+                <img src="C:\Users\simranjit\Documents\vs code\WEB-DEV\dev-image\chef3.jpeg" alt="error">
+            </div>
+        </div>
+        
+
+    </section>
+
+    <section id="contact">
+        <h1 class="contact-heading">Contact us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div id="contact-box">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="name">Email</label>
+                            <input type="email" name="name" id="mail" placeholder="Enter your mail">
+                 </div>
+                <div id="contact-box">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="name">Phone Number</label>
+                            <input type="phone" name="name" id="phone" placeholder="Enter your Number">
+                    </div>
+                    <div id="contact-box">
+                        <form action="">
+                          <div class="form-group">
+                            <label for="name">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+            </form>
+        </div>
+
+    </section>    
+</body>
+</html>
